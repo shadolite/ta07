@@ -2,7 +2,11 @@
 using namespace std;
 
 // Core requirements
-float getValueFromPointer(float* thePointer);
+float getValueFromPointer(float* speed)
+{
+   return *speed;
+}
+
 float* getMinValue(float* a, float* b);
 
 // Stretch goals
@@ -29,14 +33,14 @@ int main()
           cin >> speed[i];
    }
 
-   /* // Core Requirement 2
+   // Core Requirement 2
    for (int i = 0; i < arraySize; i++)
    {
-      float value = getValueFromPointer(????);
+      float value = getValueFromPointer(&speed[i]);
       cout << "The value of the element " << i << " is: ";
       cout << value << endl;
    }
-   */
+   
 
    /* // Core Requirement 3
    // Print the smaller of the first and last elements of the array
