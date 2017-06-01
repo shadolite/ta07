@@ -53,9 +53,30 @@ int main()
    float *pointerToMin = getMinValue(&speed[0], &speed[arraySize-1]);
    cout << *pointerToMin;
 
+   float * speedy = NULL;
+
+   speedy = new float*[arraySize];
+
+   for (int i = 0; i < arraySize; i++){
+
+      speedy[i] = &speed[i];
+
+   }
+
+   for (int x = 0; x < arraySize; x++){
+
+      cout << *speedy[x] << endl;
+      
+   }
+   
    // Clean up your array(s) here
+   delete [] speedy;
+   
    delete [] speed;
+
+   speedy = NULL;
    speed = NULL;
    return 0;
 }
+
 
