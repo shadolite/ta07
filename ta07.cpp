@@ -51,11 +51,9 @@ int main()
    // Core Requirement 3
    // Print the smaller of the first and last elements of the array
    float *pointerToMin = getMinValue(&speed[0], &speed[arraySize-1]);
-   cout << *pointerToMin;
+   cout << *pointerToMin << endl;
 
-   float * speedy = NULL;
-
-   speedy = new float*[arraySize];
+   float ** speedy = new float*[arraySize];
 
    for (int i = 0; i < arraySize; i++){
 
@@ -68,7 +66,7 @@ int main()
       cout << *speedy[x] << endl;
       
    }
-   
+
    // Clean up your array(s) here
    delete [] speedy;
    
